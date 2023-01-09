@@ -32,10 +32,10 @@ export const uploadServiceConnection = connect({
 
 async function main () {
   const client = await createClient({
-    // serviceConf: {
-    //   upload: uploadServiceConnection,
-    //   access: accessServiceConnection
-    // }
+    serviceConf: {
+      upload: uploadServiceConnection,
+      access: accessServiceConnection
+    }
   })
 
   await register(client)
